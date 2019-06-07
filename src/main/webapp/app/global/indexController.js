@@ -5,7 +5,8 @@
 			HttpService, $location) {
 		
 		$scope.connection='';
-		$rootScope.baseUrl = $location.$$absUrl.substring(0, $location.$$absUrl.length-2);
+
+		$rootScope.baseUrl = $location.$$protocol + "://"+$location.$$host + ":"+$location.$$port + "/BookLibrary/";
 		function checkConnection() {
 			HttpService.GET($rootScope.baseUrl + 'checkConnection').then(
 					function successCallback(response) {

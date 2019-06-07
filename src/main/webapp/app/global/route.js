@@ -11,13 +11,15 @@
 			url: '/',
 			templateUrl : './app/global/home.html',
 			//controller  : 'mainController',
-			param: false
 		})
 		.state('/home', {
 			url: '/home',
 			templateUrl : './app/global/home.html',
 			controller  : 'mainController',
-			param: false
+		})
+		.state('/test', {
+			url: '/test',
+			templateUrl : './app/global/test.html',
 		})
 	});
 }());
