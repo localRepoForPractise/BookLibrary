@@ -15,7 +15,7 @@ public class MainDaoImpl implements MainDao {
 
 	private static final Logger logger = Logger.getLogger(MainDaoImpl.class);
 
-	public static final String CHECK_CONNECTION_QUERY = "SELECT COUNT(*) FROM [USER]";
+	public static final String CHECK_CONNECTION_QUERY = "SELECT COUNT(*) FROM STUDENT";
 
 	public Response checkConnection() {
 		logger.info("Processing request from Class : MainDaoImpl, Method: checkConnection");

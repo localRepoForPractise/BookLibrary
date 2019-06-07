@@ -17,11 +17,18 @@
 
 	<!-- declare datasource -->
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" /> 
+		<property name="url" value="jdbc:mysql://10.245.35.26:3306/mplp" /> 
+		<property name="username" value="mplp" /> 
+		<property name="password" value="mplp_123" /> 
+	</bean>
+	
+	<!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
 		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" /> 
 		<property name="url" value="jdbc:sqlserver://prs0gbmv4050:1433;DatabaseName=PODS_DEV" /> 
 		<property name="username" value="PODSADMIN" /> 
 		<property name="password" value="P!$3c9kE" /> 
-	</bean>
+	</bean> -->
 
 	<!-- spring jdbc template -->
 	<bean id="jdbcTemplate"
