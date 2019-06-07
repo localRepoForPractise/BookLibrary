@@ -30,9 +30,11 @@
 
 
 <body ng-controller="mainController">
+	<!-- APP HEADER & MENU -->
 	<div class="container-fluid">
 		<div ng-include="'./app/global/header.html'"></div>
 	</div>
+	<!-- UI-ROUTER -->
 	<div ui-view class="container-fluid"></div>
 </body>
 <footer class="footer"> {{connection}} &nbsp;</footer>

@@ -17,15 +17,17 @@ public class MainDaoImpl implements MainDao {
 
 	public static final String CHECK_CONNECTION_QUERY = "SELECT COUNT(*) FROM STUDENT";
 
+	/**To Check Connection with DataBase
+	 * */
 	public Response checkConnection() {
 		logger.info("Processing request from Class : MainDaoImpl, Method: checkConnection");
 		Response response = new Response();
 		int count = jdbcTemplate.queryForObject(CHECK_CONNECTION_QUERY, Integer.class);
 		System.out.println("**************** : " + count);
 		if (count > 0)
-			response.setResponse("200", "SUCCESS", "SUCCESS");
+			response.setCode("200");
 		else
-			response.setResponse("500", "FAILURE", "FAILURE");
+			response.setCode("500");
 		return response;
 	}
 }

@@ -1,10 +1,12 @@
+/**
+ * Router Configuration.
+ */
+
 (function () {
 	'use strict';
 
 	var routerApp = angular.module('bookLibraryApp');
 	routerApp.config(function($stateProvider, $urlRouterProvider) {
-
-		$urlRouterProvider.otherwise('/');
 
 		$stateProvider
 		.state('/', {
@@ -21,5 +23,7 @@
 			url: '/test',
 			templateUrl : './app/global/test.html',
 		})*/
+		
+		$urlRouterProvider.otherwise('/');
 	});
 }());
