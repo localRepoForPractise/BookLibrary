@@ -18,4 +18,9 @@ public class MainServiceImpl implements MainService{
 		return mainDao.checkConnection();
 	}
 
+	@Override
+	public Response testVariable(String testVariable) {
+		return mainDao.testVariable(testVariable);
+	}
+
 }

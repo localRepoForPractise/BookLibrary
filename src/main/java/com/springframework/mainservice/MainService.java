@@ -6,4 +6,6 @@ public interface MainService {
 
 	Response checkConnection();
 
+	Response testVariable(String testVariable);
+
 }

@@ -17,6 +17,7 @@ public class MainDaoImpl implements MainDao {
 
 	public static final String CHECK_CONNECTION_QUERY = "SELECT COUNT(*) FROM STUDENT";
 
+	public static final String UPDATE_TEST_VAR = "INSERT INTO STUDENT VALUES (?,?)";
 	/**To Check Connection with DataBase
 	 * */
 	public Response checkConnection() {
@@ -27,6 +28,17 @@ public class MainDaoImpl implements MainDao {
 		if (count > 0)
 			response.setCode("200");
 		else
+			response.setCode("500");
+		return response;
+	}
+
+	@Override
+	public Response testVariable(String testVariable) {
+		Response response = new Response();
+		int rowCount = jdbcTemplate.update(UPDATE_TEST_VAR,123,testVariable);
+		if(rowCount >0)
+			response.setCode("200");
+		else 
 			response.setCode("500");
 		return response;
 	}

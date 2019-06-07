@@ -19,10 +19,10 @@
 			templateUrl : './app/global/home.html',
 			//controller  : 'mainController',
 		})
-		/**.state('/test', {
+		.state('/test', {
 			url: '/test',
 			templateUrl : './app/global/test.html',
-		})*/
+		})
 		
 		$urlRouterProvider.otherwise('/');
 	});

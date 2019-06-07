@@ -20,5 +20,20 @@
 					});
 		};
 		checkConnection();
+		
+		$scope.submit= function (testVariable){
+			
+			var reqData = testVariable;
+			HttpService.POST($rootScope.baseUrl + 'testVariable',reqData).then(
+					function successCallback(response) {
+						if(response.code==="200")
+							console.log("SUCCESS");
+						else if(response.code==="500")
+							console.log("FAILURE");
+						
+						/**console.log("Connection: ", response);*/
+						//$scope.connection = "Connection: " + response.message;
+					});
+		}
 	});
 }());
