@@ -1,21 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="bookLibraryApp">
 <head>
-<meta charset="ISO-8859-1">
-<title>Book Library</title>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-<script type="text/javascript" src="./app/global/app.js"></script>	
-<script type="text/javascript" src="./app/global/HttpServices.js"></script>
-<script type="text/javascript" src="./app/global/indexController.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Book Library</title>
+	<!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> -->
+	
+	<link rel="stylesheet" href="./assets/libs/jQuery/jquery-ui.min.css">
+	<script src="./assets/libs/jQuery/jquery-2.1.4.min.js"></script>
+	<script src="./assets/libs/jQuery/jquery-ui.min.js"></script>
+	
+	<link rel="stylesheet" href="./assets/libs/bootstrap-3.3.7/css/bootstrap.css">
+	<link rel="stylesheet" href="./assets/libs/bootstrap-3.3.7/css/bootstrap.min.css">
+	<script src="./assets/libs/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" href="./assets/css/angular-block-ui.css">
+	<script src="./assets/libs/angularjs/angular.min.js"></script>
+	<script src="./assets/libs/ui-bootstrap-tpls.min.js"></script>
+	<link href="./assets/css/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<script src="./assets/libs/angularjs/angular-ui-router.min.js"></script>
+	<link rel="stylesheet" href="./assets/css/styles.css?rev=@@hash" />
+	
+	<script type="text/javascript" src="./app/global/app.js"></script>	
+	<script type="text/javascript" src="./app/global/route.js"></script>
+	<script type="text/javascript" src="./app/global/HttpServices.js"></script>
+	<script type="text/javascript" src="./app/global/indexController.js"></script>
 </head>
 
 
-<body ng-app="bookLibraryApp" ng-controller="mainController">
-	<h1> Book Library </h1>
+<body ng-controller="mainController">
+	<div class="container-fluid">
+		<div ng-include="'./app/global/header.html'"></div>
+	</div>
+	<div ui-view class="container-fluid"></div>
 </body>
-<footer>
-	
-</footer>
+<footer class="footer"> {{connection}} &nbsp;</footer>
 </html>

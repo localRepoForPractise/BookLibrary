@@ -12,6 +12,23 @@
 	<mvc:annotation-driven />
 	<mvc:default-servlet-handler />
 
+	<!-- Support annotation -->
+	<context:annotation-config />
+
+	<!-- declare datasource -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
+		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" /> 
+		<property name="url" value="jdbc:sqlserver://prs0gbmv4050:1433;DatabaseName=PODS_DEV" /> 
+		<property name="username" value="PODSADMIN" /> 
+		<property name="password" value="P!$3c9kE" /> 
+	</bean>
+
+	<!-- spring jdbc template -->
+	<bean id="jdbcTemplate"
+		class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/Jsp/" />
