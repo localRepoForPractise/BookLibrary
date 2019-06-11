@@ -23,6 +23,11 @@
 			url: '/test',
 			templateUrl : './app/global/test.html',
 		})
+		.state('/UserBookHistory', {
+			url: '/UserBookHistory',
+			templateUrl : './app/global/UserBookHistory.html',
+			//controller  : 'mainController',
+		})
 		
 		$urlRouterProvider.otherwise('/');
 	});
