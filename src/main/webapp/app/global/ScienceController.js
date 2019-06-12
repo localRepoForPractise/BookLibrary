@@ -20,8 +20,15 @@
 					});
 		};
 		checkConnection();
-		
-		$scope.submit= function (testVariable){
+		function ScienceController($scope) {
+		    
+		    $scope.Science = [
+		        {Book_Id:101,Category_Id:1,Book_Name:'Elegant Universe ',Book_Author:'Brian Greene ',Created_By:'smore11',
+		        	Created_Date:'12/06/19'
+		        }
+		        }
+		    ];
+	/*	$scope.submit= function (testVariable){
 			
 			var reqData = testVariable;
 			HttpService.POST($rootScope.baseUrl + 'testVariable',reqData).then(
@@ -34,6 +41,14 @@
 						*//***console.log("Connection: ", response);*//*
 						//$scope.connection = "Connection: " + response.message;
 					});
+					function ScienceController($scope) {
+								    
+								    $scope.Science = [
+								        {Book_Id:101,Category_Id:1,Book_Name:'Elegant Universe ',Book_Author:'Brian Greene ',Created_By:'smore11',
+								        	Created_Date:'12/06/19'
+								        }
+								        }
+								    ];
 			//bookLiberary
 			
 			$scope.ScienceBooks=function (Science)
@@ -44,7 +59,9 @@
 							if(response.code==="200")
 								console.log("SUCCESS");
 							else if(response.code==="500")
-								console.log("FAILURE");
+								console.log("FAILURE"*/);
+			
+								
 				}
 			}
 		}

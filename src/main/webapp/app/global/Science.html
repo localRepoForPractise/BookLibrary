@@ -19,23 +19,23 @@
 <body>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
     <script type="text/javascript">
-        var app = angular.module('MyApp', []);
+         var app = angular.module('MyApp', []);
         app.controller('ScienceController', function ($scope) {
             $scope.IsVisible = false;
             $scope.ScienceBooks = function () {
-                $scope.Books = [
+                 $scope.Books = [
                 	{Book_Id:101,Category_Id:1,Book_Name:'Elegant Universe ',Book_Author:'Brian Greene ',Created_By:'smore11',Created_Date:'12/06/19'},
                     {Book_Id:102,Category_Id:1,Book_Name:'Artificial Intelligence',Book_Author:' Melanie Mitchell',Created_By:'smore11',Created_Date:'12/06/19'},
                     {Book_Id:103,Category_Id:1,Book_Name:'Know-It-All Society',Book_Author:' Michael P. Lynch',Created_By:'smore11',Created_Date:'12/06/19'},
-                 ],
+                 ], 
                 $scope.IsVisible = true;
             };
             //Sciencebooks
-        });
+        }); 
     </script>
     <div ng-app="MyApp" ng-controller="ScienceController">
-        <input type="button" value="Science Books" ng-click="ScienceBooks()" />
-        <hr />
+    <input type="button" value="Science Books" ng-click="ScienceBooks()" />
+          <hr />
         <table cellpadding="0" cellspacing="0" ng-show="IsVisible">
              <tr>
                <th>Book_Id</th>
@@ -45,15 +45,18 @@
                   <th>Created_By</th>
                     <th>Created_Date</th>
             </tr> 
-             <tbody ng-repeat="m in Books">
-                 <tr>
+             <tbody ng-repeat = "m in Books"> 
+                  <tr>
                 <td>{{ m.Book_Id }}</td>
                <td>{{ m.Category_Id }}</td>
                <td>{{ m.Book_Name }}</td>
                <td>{{ m.Book_Author }}</td>
                <td>{{ m.Created_By}}</td>
                <td>{{ m.Created_Date }}</td>
-                </tr>
+               </tr>  
+               
+             
+                
             </tbody> 
         </table>
     </div>
