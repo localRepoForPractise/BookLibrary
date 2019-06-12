@@ -38,7 +38,7 @@
 		.state('/Science', {
 			url: '/Science',
 			templateUrl : './app/global/Science.html',
-			//controller  : 'mainController',
+			//controller  : 'mainControllers',
 		})
 		$urlRouterProvider.otherwise('/');
 	});

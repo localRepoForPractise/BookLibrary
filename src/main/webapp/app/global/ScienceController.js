@@ -31,8 +31,21 @@
 						else if(response.code==="500")
 							console.log("FAILURE");
 						
-						/**console.log("Connection: ", response);*/
+						*//**console.log("Connection: ", response);*//*
 						//$scope.connection = "Connection: " + response.message;
 					});
+			//bookLiberary
+			
+			$scope.ScienceBooks=function (scienceBooks)
+			{
+				var reqData=scienceBooks;
+				HttpService.POST($rootScope.baseUrl + 'scienceBooks',reqData).then(
+						function successCallback(response) {
+							if(response.code==="200")
+								console.log("SUCCESS");
+							else if(response.code==="500")
+								console.log("FAILURE");
+				}
+			}
 		}
 	});
