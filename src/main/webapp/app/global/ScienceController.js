@@ -31,7 +31,7 @@
 						else if(response.code==="500")
 							console.log("FAILURE");
 						
-						*//**console.log("Connection: ", response);*//*
+						*//***console.log("Connection: ", response);*//*
 						//$scope.connection = "Connection: " + response.message;
 					});
 			//bookLiberary

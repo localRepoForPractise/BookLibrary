@@ -17,7 +17,7 @@
 		.state('/home', {
 			url: '/home',
 			templateUrl : './app/global/home.html',
-			//controller  : 'mainController',
+			//controller_  : 'mainController',
 		})
 		.state('/test', {
 			url: '/test',
