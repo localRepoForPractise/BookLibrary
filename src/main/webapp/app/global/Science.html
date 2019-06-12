@@ -19,7 +19,7 @@
 <body>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
     <script type="text/javascript">
-        var app = angular.module('MyApp', [])
+        var app = angular.module('MyApp', []);
         app.controller('ScienceController', function ($scope) {
             $scope.IsVisible = false;
             $scope.ScienceBooks = function () {
@@ -30,7 +30,7 @@
                  ],
                 $scope.IsVisible = true;
             };
-            //book
+            //books
         });
     </script>
     <div ng-app="MyApp" ng-controller="ScienceController">
@@ -47,7 +47,7 @@
             </tr> 
              <tbody ng-repeat="m in Books">
                  <tr>
-                    <td>{{ m.Book_Id }}</td>
+                <td>{{ m.Book_Id }}</td>
                <td>{{ m.Category_Id }}</td>
                <td>{{ m.Book_Name }}</td>
                <td>{{ m.Book_Author }}</td>

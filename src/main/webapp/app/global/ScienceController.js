@@ -6,7 +6,7 @@
 	var app = angular.module('bookLibraryApp');
 	app.controller('mainController', function($rootScope, $scope, $http, HttpService, $location) {
 		
-		/** TO GET BASE URI OF APP*/
+		/** TO GET BASE URI OF APP*//
 		$rootScope.baseUrl = $location.$$protocol + "://"+$location.$$host + ":"+$location.$$port + "/BookLibrary/";
 		$scope.connection='';
 		
@@ -36,10 +36,10 @@
 					});
 			//bookLiberary
 			
-			$scope.ScienceBooks=function (scienceBooks)
+			$scope.ScienceBooks=function (Science)
 			{
-				var reqData=scienceBooks;
-				HttpService.POST($rootScope.baseUrl + 'scienceBooks',reqData).then(
+				var reqData=Science;
+				HttpService.POST($rootScope.baseUrl + 'Science',reqData).then(
 						function successCallback(response) {
 							if(response.code==="200")
 								console.log("SUCCESS");
