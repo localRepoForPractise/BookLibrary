@@ -29,6 +29,17 @@
 			//controller  : 'mainController',
 		})
 		
+		.state('/History', {
+			url: '/History',
+			templateUrl : './app/global/History.html',
+			//controller  : 'mainController',
+		})
+		
+		.state('/Science', {
+			url: '/Science',
+			templateUrl : './app/global/Science.html',
+			//controller  : 'mainController',
+		})
 		$urlRouterProvider.otherwise('/');
 	});
 }());
