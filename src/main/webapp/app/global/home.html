@@ -1,7 +1,116 @@
-<h3 class="text-center"> Home </h3>
-<!-- <a  href="#test"> TEST</a> -->
+<!-- <div>
+	<h3 class="text-center">Home</h3>
+	<a  href="#test"> TEST</a>
 
-<input  type="text" ng-model="testVariable"/>
-<button ng-click="submit(testVariable)">submit</button>
-<a href="#UserBookHistory">UserBookHistory</a>
-<a href="#Science">ScienceBooks</a>
+	<input type="text" ng-model="testVariable" />
+	<button ng-click="submit(testVariable)">submit</button>
+	<a href="#UserBookHistory">UserBookHistory</a> <a href="#Science">ScienceBooks</a>
+	<br>
+</div>
+<br> -->
+
+<!-- --------------------------------------------------- -->
+
+
+<style>
+
+.navbar { 
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropbtn {
+	background-color: #3498DB;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+	background-color: #2980B9;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	overflow: auto;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown a:hover {
+	background-color: #ddd;
+}
+
+.show {
+	display: block;
+}
+</style>
+
+<div class="navbar">
+	<a href="#home">Home</a> 
+	<a href="#login" class="fa fa-user">Login</a>
+	<div class="dropdown">
+		<button onclick="myFunction()" class="dropbtn">
+			Dropdown <i class="fa fa-caret-down"></i>
+		</button>
+		<div id="myDropdown" class="dropdown-content">
+			<a href="#History">History</a> 
+			<a href="#Philosophy">Philosophy</a>
+			 <a href="#Science">Science</a> 
+			 <a href="#Art">Art</a>
+			  <a href="#Comics">Comics</a>
+			<a href="#GK">General Awarness</a>
+		</div>
+	</div>	
+</div>
+
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
+

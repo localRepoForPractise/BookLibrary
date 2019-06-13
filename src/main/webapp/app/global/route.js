@@ -49,6 +49,12 @@
 			templateUrl : './app/BookCategory/science.html',
 			controller : 'scienceTestController'
 		})
+		.state('/login', {
+			url: '/login',
+			templateUrl : './app/global/login.html',
+			controller  : 'loginController',
+		})
+				
 		$urlRouterProvider.otherwise('/');
 	});
 }());

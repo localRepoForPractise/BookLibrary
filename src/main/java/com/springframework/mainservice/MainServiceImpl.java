@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import com.springframework.loginController.Login;
 import com.springframework.maincontroller.Response;
 import com.springframework.maindao.MainDao;
 
@@ -21,6 +22,11 @@ public class MainServiceImpl implements MainService{
 	@Override
 	public Response testVariable(String testVariable) {
 		return mainDao.testVariable(testVariable);
+	}
+	
+	@Override
+	public Response submitLoginDetails(Login login){
+		return mainDao.submitLoginDetails(login);
 	}
 
 }
