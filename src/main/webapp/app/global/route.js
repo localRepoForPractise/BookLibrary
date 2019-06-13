@@ -40,6 +40,15 @@
 			templateUrl : './app/global/Science.html',
 			controller  : 'scienceControllers',
 		})
+		.state('/SignUp', {
+			url: '/SignUp',
+			templateUrl : './app/global/SignUp.html',
+		})
+		.state('/scienceTest', {
+			url: '/scienceTest',
+			templateUrl : './app/BookCategory/science.html',
+			controller : 'scienceTestController'
+		})
 		$urlRouterProvider.otherwise('/');
 	});
 }());

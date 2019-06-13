@@ -1,0 +1,21 @@
+<div>
+	<h1>Science Books</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Book ID</th>
+				<th>Book Name</th>
+				<th>Book Author</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in scienceBookList">
+				<td>{{ item.bookId }}</td>
+				<td>{{ item.bookName }}</td>
+				<td>{{ item.bookAuthor }}</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+</div>
