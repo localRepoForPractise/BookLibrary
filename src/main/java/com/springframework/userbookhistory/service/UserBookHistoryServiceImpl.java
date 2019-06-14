@@ -13,7 +13,7 @@ public class UserBookHistoryServiceImpl implements UserBookHistoryService
 {
 	
 	@Autowired
-	@Qualifier("bookCategoryDao")
+	@Qualifier("userBookHistoryDao")
 	private UserBookHistoryDao userBookHistoryDao;
 	
 	@Override

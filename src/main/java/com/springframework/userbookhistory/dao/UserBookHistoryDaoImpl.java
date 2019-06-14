@@ -4,7 +4,7 @@ import org.springframework.stereotype.Repository;
 
 import com.springframework.maincontroller.Response;
 
-@Repository("bookCategoryDao")
+@Repository("userBookHistoryDao")
 public class UserBookHistoryDaoImpl implements UserBookHistoryDao
 {
 
