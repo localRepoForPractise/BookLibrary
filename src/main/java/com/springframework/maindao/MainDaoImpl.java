@@ -20,7 +20,7 @@ public class MainDaoImpl implements MainDao {
 
 	public static final String UPDATE_TEST_VAR = "INSERT INTO STUDENT VALUES (?,?)";
 	
-	public static final String SELECT_LOGIN_DETAILS = "SELECT * FROM bl_book_users where USER_NAME = ? AND PASSWORD = ?";
+	public static final String SELECT_LOGIN_DETAILS = "SELECT COUNT(*) FROM bl_book_users where USER_NAME = ? AND PASSWORD = ?";
 	/**To Check Connection with DataBase
 	 * */
 	public Response checkConnection() {
@@ -38,7 +38,7 @@ public class MainDaoImpl implements MainDao {
 	@Override
 	public Response testVariable(String testVariable) {
 		Response response = new Response();
-		int rowCount = jdbcTemplate.update(UPDATE_TEST_VAR,123,testVariable);
+		int rowCount = jdbcTemplate.update(UPDATE_TEST_VAR,15,testVariable);
 		if(rowCount >0)
 			response.setCode("200");
 		else 
@@ -47,6 +47,7 @@ public class MainDaoImpl implements MainDao {
 	}
 	
 	public Response submitLoginDetails(Login login) {
+		/*System.out.println("******DAOI****");*/
 		Response response = new Response();
 		int rowCount = jdbcTemplate.queryForObject(SELECT_LOGIN_DETAILS,Integer.class,
 				login.getUserName(),login.getPassword());

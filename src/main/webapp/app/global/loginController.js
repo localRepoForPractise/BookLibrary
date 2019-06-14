@@ -11,11 +11,14 @@
 		
 		$scope.submit= function (login){
 			
-			var reqData = login;
-			HttpService.POST($rootScope.baseUrl + 'login',reqData).then(
+			var reqData = {
+					userName : login.userName,
+					password : login.password
+			};
+			HttpService.POST($rootScope.baseUrl + 'login',login).then(
 					function successCallback(response) {																							
 						if(response.code==="200")							
-							console.log("SUCCESS");
+							console.log("SUCCESS");					
 						else if(response.code==="500")
 							console.log("FAILURE");											
 					});
