@@ -25,8 +25,8 @@
 		})
 		.state('/UserBookHistory', {
 			url: '/UserBookHistory',
-			templateUrl : './app/global/UserBookHistory.html',
-			//controller  : 'mainController',
+			templateUrl : './app/UserBookHistory/UserBookHistory.html',
+			controller  : 'UserBookHistoryController'
 		})
 		
 		.state('/History', {
