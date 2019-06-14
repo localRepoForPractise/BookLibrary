@@ -26,7 +26,7 @@
 		.state('/UserBookHistory', {
 			url: '/UserBookHistory',
 			templateUrl : './app/UserBookHistory/UserBookHistory.html',
-			controller  : 'UserBookHistoryController'
+			controller  : 'UserBookHistoryController',
 		})
 		
 		.state('/History', {

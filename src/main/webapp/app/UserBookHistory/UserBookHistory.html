@@ -1,23 +1,20 @@
-<div class="jumbotron" ng-app="UserHistoryTable" ng-controller="UserHistoryTableCtrl">
+{{Hello}}
+<div class="jumbotron">
 <center><h2>Book History</h2></center>
-
 <table class="table">
 <thead>
 <tr>
 <th>Book ID</th>
 <th>Book Name</th>
 <th>Author</th>
-<th>Enrolled Date</th>
 </tr>
 </thead>
 <tbody>
-<tr ng-repeat="">
-<td>{{}}</td>
-<td>{{}}</td>
-<td>{{}}</td>
-<td>{{}}</td>
+<tr ng-repeat="x in book">
+<td>{{x.id}}</td>
+<td>{{x.nm}}</td>
+<td>{{x.at}}</td>
 </tr>
 </tbody>
 </table>
-
 </div>
