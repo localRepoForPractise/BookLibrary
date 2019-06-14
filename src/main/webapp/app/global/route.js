@@ -54,6 +54,11 @@
 			templateUrl : './app/global/login.html',
 			controller  : 'loginController',
 		})
+		.state('/HistoryTest', {
+			url: '/HistoryTest',
+			templateUrl : './app/BookCategory/History.html',
+			controller : 'HistoryTestController'
+		})
 				
 		$urlRouterProvider.otherwise('/');
 	});
