@@ -24,9 +24,52 @@ table tr:nth-child(odd) {
 table tr:nth-child(even) {
 	background-color: #ffffff;
 }
+<style>
+.main-w3layouts {
+    padding: 2em 0 1em;
+}
+.wrapper {
+    /* position: relative; */
+    overflow: hidden;
+}
 
-/** LOGIN  */
+.main-agileinfo {
+    width: 95%;
+ text-align: center;
+}
+.agileits-top {
+    padding: 2.2em;
+    width: 75%;
+ margin: 1.5em 0;
+ text-align: center;
 
-
-
-/** */
+}
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 73%;
+}
+input.email, input.text.w3lpass {
+    margin: 1.5em 0;
+}
+div {
+    display: block;
+}
+input.checkbox {
+    content: "";
+    position: absolute;
+    width: 1.2em;
+    height: 1.2em;
+    background: inherit;
+    cursor: pointer;
+}
+label {
+    cursor: default;
+}
+.w3copyright-agile {
+    margin: 2em 0 1em;
+    text-align: center;
+}
+social.h3 {
+color:pink;
+font-size: 14px;
+}
+</style>
