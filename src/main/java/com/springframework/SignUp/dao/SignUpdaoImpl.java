@@ -18,14 +18,14 @@ public class SignUpdaoImpl implements SignUpdao{
 
 	
 	//public static final String UPDATE_TEST_VAR1 = "INSERT INTO bl_book_users(USER_ID,USER_NAME) VALUES (?,?,)";
-	public static final String UPDATE_TEST_VAR1 = "INSERT INTO bl_book_users (USER_NAME,PASSWORD,CREATED_BY, USER_EMAIL) VALUES (?,?,?,?)";
+	public static final String UPDATE_TEST_VAR1 = "INSERT INTO bl_book_users (USER_NAME,CREATED_BY,PASSWORD,USER_EMAIL,CREATED_DATE) VALUES (?,?,?,?,?)";
 	
 	public Response pass(SignUpDTO signUpDTO) {
 		logger.info("Processing request from Class : SignUpdaoImpl, Method: signUpUser");
 		Response response = new Response();
-		int rowCount = jdbcTemplate.update(UPDATE_TEST_VAR1, signUpDTO.getUsername(),signUpDTO.getPassword()
-		,signUpDTO.getCreated_by(),signUpDTO.getEmail());
-		//int rowCount = jdbcTemplate.update(UPDATE_TEST_VAR1,4,um);
+		int rowCount = jdbcTemplate.update(UPDATE_TEST_VAR1, signUpDTO.getUsername(),signUpDTO.getCreate_by(),
+				signUpDTO.getPassword(),signUpDTO.getEmail(),signUpDTO.getCreate_date());
+		
 			
 		if(rowCount >0)
 			response.setCode("200");

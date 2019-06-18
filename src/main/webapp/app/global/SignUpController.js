@@ -26,16 +26,15 @@ function check() {
 				um : '',
 				pwd : '',
 				em :'',
-				cpwd:''
 		};
       $scope.pass= function (){
 	
-			//var reqData=um;
+			
 			var reqData = {
-					Username :$scope.signUp.um,
-					 Email:$scope.signUp.em,
-			      password:$scope.signUp.pwd,
-			      created_by:$scope.signUp.um
+					username :$scope.signUp.um,
+					create_by:$scope.signUp.um,
+			        password:$scope.signUp.pwd,
+			        email:$scope.signUp.em
 			     // User_type=Null;
 			      //created_date=CURDATE();
 			      
