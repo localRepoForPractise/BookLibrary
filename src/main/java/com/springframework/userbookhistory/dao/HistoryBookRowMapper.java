@@ -15,8 +15,8 @@ public class HistoryBookRowMapper implements RowMapper<HISTORYBOOKDTO>{
 	public HISTORYBOOKDTO mapRow(ResultSet arg0,int agr1) throws SQLException
 	{
 		HISTORYBOOKDTO obj= new HISTORYBOOKDTO();
-		obj.setBookId(arg0.getInt("USER_ID"));
-		obj.setUserId(arg0.getInt("BOOK_ID"));
+		obj.setBook_Name(arg0.getString("B.BOOK_NAME"));
+		obj.setAuthor_Name(arg0.getString("B.BOOK_AUTHOR"));
 		return obj;
 	}
 	

@@ -1,20 +1,19 @@
 package com.springframework.userbookhistory.model;
 
 public class HISTORYBOOKDTO {
-	private int UserId;
-	private int BookId;
-	public int getUserId() {
-		return UserId;
+	private String Book_Name;
+	private String Author_Name;
+	public String getBook_Name() {
+		return Book_Name;
 	}
-	public void setUserId(int userId) {
-		UserId = userId;
+	public void setBook_Name(String book_Name) {
+		Book_Name = book_Name;
 	}
-	public int getBookId() {
-		return BookId;
+	public String getAuthor_Name() {
+		return Author_Name;
 	}
-	public void setBookId(int bookId) {
-		BookId = bookId;
+	public void setAuthor_Name(String author_Name) {
+		Author_Name = author_Name;
 	}
-	
 
 }

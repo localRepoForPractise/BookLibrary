@@ -18,12 +18,12 @@ public class UserBookHistoryDaoImpl implements UserBookHistoryDao
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
-	public static final String GET_ALL_HISTORY ="SELECT * FROM BL_BOOK_USERS_HISTORY";
+	public static final String GET_ALL_HISTORY ="SELECT B.BOOK_NAME,B.BOOK_AUTHOR FROM BL_BOOK_USERS_HISTORY AS BUH INNER JOIN BL_BOOKS AS B ON BUH.BOOK_ID=B.BOOK_ID  WHERE BUH.USER_ID=?";
 
 	@Override
 	public Response getUserBookHistory(int userid) {
 		Response response = new Response();
-		List<HISTORYBOOKDTO> bookList = jdbcTemplate.query(GET_ALL_HISTORY, new HistoryBookRowMapper());
+		List<HISTORYBOOKDTO> bookList = jdbcTemplate.query(GET_ALL_HISTORY, new HistoryBookRowMapper(),userid);
 		if(!bookList.isEmpty())
 			response.setResponse("200", "SUCCESS", "SUCCESS", bookList);
 		else
