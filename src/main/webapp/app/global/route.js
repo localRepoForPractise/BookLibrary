@@ -61,6 +61,12 @@
 			templateUrl : './app/global/SignUp.html',
 			controller : 'signUpController'
 		})		
+		
+		.state('/Fantasy', {
+			url: '/Fantasy',
+			templateUrl : './app/BookCategory/Fantasy.html',
+			controller : 'FantasyController',
+		})
 		$urlRouterProvider.otherwise('/');
 	});
 }());

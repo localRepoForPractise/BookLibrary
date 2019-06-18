@@ -1,0 +1,29 @@
+<div>
+
+	<h1>Fantasy Books</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Book ID</th>
+				<th>Book Name</th>
+				<th>Book Author</th>
+				<th>CategoryId</th>
+				<th>Enrol</th>
+				</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in HistoryBookList">
+				<td>{{ item.BookId }}</td>
+				<td>{{ item.BookName }}</td>
+				<td>{{ item.BookAuthor }}</td>
+				<td>{{ item.CategoryId }}</td>
+				<td><button onclick="Enrol()">Enrol</button></td>
+	        </tr>
+		</tbody>
+	</table>
+ <script>
+function Enroll(){
+  alert("Book Enrol Successfully");
+}
+</script>
+</div>
