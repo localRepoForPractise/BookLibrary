@@ -19,7 +19,20 @@
 			/** TO GET BASE URI OF APP */
 			$rootScope.baseUrl = $location.$$protocol + "://" + $location.$$host
 					+ ":" + $location.$$port + "/BookLibrary/";
-		//
+		
+			$scope.getData= function (){
+				HttpService.POST($rootScope.baseUrl+"UserBookHistory",1001).then(function(response){
+					if(response.code ==="200"){
+						console.log("success",response.data);
+						$scope.book=[];
+						$scope.book = response.data;
+					}
+					else if(response.code ==="500")
+						console.log("failure",response);
+				});
+			};
+			
+			$scope.getData();
 
 			
 			
