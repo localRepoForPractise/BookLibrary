@@ -3,6 +3,6 @@
  */
 (function() {
 
-	var app = angular.module('bookLibraryApp', [ 'ui.router', 'ui.bootstrap' ]);
+	var app = angular.module('bookLibraryApp', [ 'ui.router', 'ui.bootstrap' , 'ngStorage']);
 
 })();

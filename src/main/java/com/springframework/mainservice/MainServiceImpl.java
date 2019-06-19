@@ -26,6 +26,7 @@ public class MainServiceImpl implements MainService{
 	
 	@Override
 	public Response submitLoginDetails(Login login){
+		System.out.println("*****Service******");
 		return mainDao.submitLoginDetails(login);
 	}
 

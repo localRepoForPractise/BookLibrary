@@ -47,10 +47,11 @@ public class MainDaoImpl implements MainDao {
 	}
 	
 	public Response submitLoginDetails(Login login) {
-		/*System.out.println("******DAOI****");*/
+		System.out.println("******DAOI****");
 		Response response = new Response();
 		int rowCount = jdbcTemplate.queryForObject(SELECT_LOGIN_DETAILS,Integer.class,
 				login.getUserName(),login.getPassword());
+		System.out.println("Row count is " + rowCount);
 		if(rowCount >0)
 			response.setCode("200");
 		else 

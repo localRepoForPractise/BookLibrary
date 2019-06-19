@@ -22,7 +22,7 @@
 		
 		
 		$scope.getData= function (){
-			HttpService.GET($rootScope.baseUrl+"scienceTest").then(function(response){
+			HttpService.POST($rootScope.baseUrl+"scienceTest","science").then(function(response){
 				if(response.code ==="200"){
 					console.log("success",response.data);
 					$scope.scienceBookList=[];

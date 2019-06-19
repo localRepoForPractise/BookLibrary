@@ -45,7 +45,7 @@ table tr:nth-child(even) {
 
 }
 input[type="text"], input[type="email"], input[type="password"] {
-    width: 73%;
+    width: 100%;
 }
 input.email, input.text.w3lpass {
     margin: 1.5em 0;
