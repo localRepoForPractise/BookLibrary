@@ -3,10 +3,10 @@ package com.springframework.userbookhistory.dao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import org.springframework.jdbc.core.RowCallbackHandler;
+
 import org.springframework.jdbc.core.RowMapper;
 
-import com.springframework.bookcategory.model.BookDTO;
+
 import com.springframework.userbookhistory.model.HISTORYBOOKDTO;
 
 public class HistoryBookRowMapper implements RowMapper<HISTORYBOOKDTO>{

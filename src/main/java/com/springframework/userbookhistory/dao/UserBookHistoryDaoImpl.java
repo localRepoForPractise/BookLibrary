@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.springframework.bookcategory.dao.ScienceBookRowMapper;
-import com.springframework.bookcategory.model.BookDTO;
+
+
 import com.springframework.maincontroller.Response;
 import com.springframework.userbookhistory.model.HISTORYBOOKDTO;
 
