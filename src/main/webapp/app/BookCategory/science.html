@@ -1,5 +1,18 @@
 <div>
 	<h1>Science Books</h1>
+
+		<form>
+		  <div class="form-group">
+		    <label for="email">Book Name:</label>
+		    <input type="text" class="form-control" id="email" ng-model="bookName">
+		  </div>
+		  <div class="form-group">
+		    <label for="pwd">Book Author:</label>
+		    <input type="text" class="form-control" id="pwd" ng-model="bookAuthor">
+		  </div>
+		  <button type="submit" class="btn btn-primary" ng-click="addBook()">Submit</button>
+		</form>
+
 	<table>
 		<thead>
 			<tr>
@@ -16,6 +29,4 @@
 			</tr>
 		</tbody>
 	</table>
-
-
 </div>

@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.springframework.bookcategory.dao.BookCategoryDao;
+import com.springframework.bookcategory.model.BookDTO;
 import com.springframework.maincontroller.Response;
 
 @Service("bookCategoryService")
@@ -18,6 +19,11 @@ public class BookCategoryServiceImpl implements BookCategoryService{
 	public Response getAllScienceBooks(String category) {
 		
 		return bookCategoryDao.getAllScienceBooks(category);
+	}
+
+	@Override
+	public Response addBook(BookDTO addBook) {
+		return bookCategoryDao.addBook(addBook);
 	}
 
 	

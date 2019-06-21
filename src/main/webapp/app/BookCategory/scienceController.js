@@ -34,5 +34,23 @@
 		};
 		
 		$scope.getData();
+		
+		$scope.addBook = function (){
+			console.log("bookName : " + $scope.bookName);
+			console.log("bookAuthor : " + $scope.bookAuthor);
+			
+			var reqData = {
+					bookName : $scope.bookName,
+					bookAuthor : $scope.bookAuthor
+			};
+			HttpService.POST($rootScope.baseUrl+"addBook",reqData).then(function(response){
+				if(response.code ==="200"){
+					console.log("success",response.data);
+					$scope.getData();
+				}
+				else if(response.code ==="500")
+					console.log("failure",response);
+			});
+		};
 	});
 }());

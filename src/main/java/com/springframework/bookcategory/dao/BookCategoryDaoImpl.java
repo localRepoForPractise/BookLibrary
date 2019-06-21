@@ -18,6 +18,8 @@ public class BookCategoryDaoImpl implements BookCategoryDao{
 	
 	public static final String GET_ALL_SCIENCE_BOOKS ="SELECT * FROM BL_BOOKS";
 	
+	public static final String ADD_BOOK ="INSERT INTO BL_BOOKS (CATEGORY_ID,BOOK_NAME,BOOK_AUTHOR,CREATED_BY,CREATED_DATE) VALUES(?,?,?,?,CURDATE())";
+	
 	
 	@Override
 	public Response getAllScienceBooks(String category) {
@@ -29,6 +31,18 @@ public class BookCategoryDaoImpl implements BookCategoryDao{
 		else
 			response.setResponse("500", "FAILURE", "NO DATA FOUND", Collections.emptyList());
 			
+		return response;
+	}
+
+
+	@Override
+	public Response addBook(BookDTO addBook) {
+		Response response = new Response();
+		int count = jdbcTemplate.update(ADD_BOOK,5,addBook.getBookName(),addBook.getBookAuthor(),"VNANDANW");
+		if(count >0)
+			response.setCode("200");
+		else
+			response.setCode("500");
 		return response;
 	}
 
