@@ -13,7 +13,7 @@ function check() {
 (function() {
 
 	var app = angular.module('bookLibraryApp');
-	app.controller('signUpController', function($rootScope, $scope, $http, HttpService, $location) {
+	app.controller('signUpController',function($rootScope, $scope, $http, HttpService, $location) {
 			
 		
 		
@@ -27,6 +27,9 @@ function check() {
 				pwd : '',
 				em :'',
 		};
+		var FromDate ;
+		var date = new Date();
+		FromDate = date.getFullYear() + '-' + ( (date.getMonth() + 1)) + '-' + ( date.getDate());
       $scope.pass= function (){
 	
 			
@@ -34,9 +37,8 @@ function check() {
 					username :$scope.signUp.um,
 					create_by:$scope.signUp.um,
 			        password:$scope.signUp.pwd,
-			        email:$scope.signUp.em
-			     // User_type=Null;
-			      //created_date=CURDATE();
+			        email:$scope.signUp.em,
+			        create_date :FromDate
 			      
 			};
 			HttpService.POST($rootScope.baseUrl + 'SignUp',reqData).then(
@@ -50,5 +52,19 @@ function check() {
 						//$scope.connection = "Connection: " + response.message;
 					});
 					}
+      //fecthing data:
+     /* $scope.displayData= function (){
+			HttpService.GET($rootScope.baseUrl+"SignUp").then(function(response){
+				if(response.code ==="200"){
+					console.log("success",response.data);
+					$scope.userList=[];
+					$scope.userList = response.data;
+				}
+				else if(response.code ==="500")
+					console.log("failure",response);
+			});
+		};
+		
+		$scope.displayData();*/
 	});
 }());

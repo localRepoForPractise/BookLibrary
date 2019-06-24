@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -33,4 +34,11 @@ public class SignUpController {
 			response.setResponse("500", "FAILURE", "FAILURE");
 		return response;
 	}
+	//fecthing data from database:
+
+	/*public Response getAllUser(@RequestParam int uid){
+		Response response = new Response();
+		response =signupService.getAllUser(uid);
+		return response;
+}*/
 }
