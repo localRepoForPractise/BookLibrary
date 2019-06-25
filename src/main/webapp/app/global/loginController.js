@@ -21,14 +21,13 @@
 							$localStorage.LocalMessage = login.userName;
 							//$sessionStorage.SessionMessage = login.userName;
 							//console.log("SUCCESS");			
-							alert("Login successfull!!!");
-							//NOTE : After successful login redirect to home page for now after completion need to change the redirected page to the respected page
-							//$location.path("home");								
+							alert("Login successfull!!!");														
+							$location.path("Dashboard");								
 						}
 
 						else if(response.code==="500")
 							//console.log("FAILURE");	
-							alert("Login failed...Please try again");	
+							alert("Login failed user name or password is incorrect...Please try again");	
 					});
 		}
 	});

@@ -67,6 +67,12 @@
 			templateUrl : './app/BookCategory/Fantasy.html',
 			controller : 'FantasyController',
 		})
+		
+		.state('/Dashboard', {
+			url: '/Dashboard',
+			templateUrl : './app/global/Dashboard.html',
+			controller  : 'dashboardController',
+		})
 		$urlRouterProvider.otherwise('/');
 	});
 }());
