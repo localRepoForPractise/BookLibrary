@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<style>
+.center {
+  margin: auto;
+  width: 40%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+</style>
+
+
+<form ng-app="bookLibraryApp"  ng-controller="ManageBook" 
+ng-submit="submit(book)" name="ManageForm" novalidate>
+  <select ng-model="book.name">
+  <option >Volvo</option>
+  <option >Saab</option>
+  <option >Mercedes</option>
+  <option >Audi</option>
+</select>
+</br></br>
+
+
+<div class="center">
+<b>Book Id  :</b><input type="text" ng-model="book.bid"  required></br>
+<b>Book Name  :</b><input type="text" ng-model="book.bname"  required></br>
+<b>Book  Author :</b><input type="text" ng-model="book.bauthor"  required></br>
+<b>Created By  :</b><input type="text" ng-model="book.bcreatedby" required></br>
+<b>Created  On  :</b><input type="text" ng-model="book.bcreatedon"  required></br></br>
+
+ <input type="submit" value="submit" class="btn btn-primary">
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+</form>
+</html>

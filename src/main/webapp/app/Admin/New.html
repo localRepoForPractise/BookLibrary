@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+
+<form ng-app="bookLibraryApp"  ng-controller="New" 
+ng-submit="submit(book)" name="ManageForm" novalidate>
+  <select ng-model="book.name">
+  <option >Volvo</option>
+  <option >Saab</option>
+  <option >Mercedes</option>
+  <option >Audi</option>
+</select>
+
+  <input type="submit" value="submit" class="btn btn-primary">
+</form>
+</html>
