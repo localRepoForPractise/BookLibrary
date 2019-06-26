@@ -12,12 +12,12 @@
 		.state('/', {
 			url: '/',
 			templateUrl : './app/global/home.html',
-			//controller  : 'mainController',
+			controller  : 'menucontroller',
 		})
 		.state('/home', {
 			url: '/home',
 			templateUrl : './app/global/home.html',
-			//controller_  : 'mainController',
+			controller_  : 'menucontroller',
 		})
 		.state('/test', {
 			url: '/test',
@@ -73,28 +73,6 @@
 			templateUrl : './app/global/Dashboard.html',
 			controller  : 'dashboardController',
 		})
-		
-		
-		
-		.state('/Admin_Homepage', {
-			url: '/Admin_Homepage',
-			templateUrl : './app/Admin/Admin_Homepage.html',
-			controller  : 'Admin_Homepage',
-		})
-		
-		.state('/ManageBook', {
-			url: '/ManageBook',
-			templateUrl : './app/Admin/ManageBook.html',
-			controller  : 'ManageBook',
-		})
-		
-		
-		.state('/New', {
-			url: '/New',
-			templateUrl : './app/Admin/New.html',
-			controller  : 'New',
-		})
-		
 		$urlRouterProvider.otherwise('/');
 	});
 }());
