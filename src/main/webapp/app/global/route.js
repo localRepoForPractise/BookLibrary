@@ -14,11 +14,11 @@
 			templateUrl : './app/global/home.html',
 			controller  : 'menucontroller',
 		})
-		.state('/home', {
+		/*.state('/home', {
 			url: '/home',
 			templateUrl : './app/global/home.html',
 			controller_  : 'menucontroller',
-		})
+		})*/
 		.state('/test', {
 			url: '/test',
 			templateUrl : './app/global/test.html',
