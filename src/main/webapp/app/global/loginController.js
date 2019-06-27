@@ -3,7 +3,7 @@
 (function() {
 
 	var app = angular.module('bookLibraryApp');
-	app.controller('loginController', function($rootScope, $scope, $http, HttpService, $location,$localStorage, $sessionStorage) {
+	app.controller('loginController', function($rootScope, $scope, $http, HttpService, $location,$localStorage, $sessionStorage, dataService) {
 
 		/** TO GET BASE URI OF APP*/
 		$rootScope.baseUrl = $location.$$protocol + "://"+$location.$$host + ":"+$location.$$port + "/BookLibrary/";									
@@ -18,10 +18,11 @@
 					function successCallback(response) {																							
 						if(response.code==="200")	
 						{
-							$localStorage.LocalMessage = login.userName;
-							//$sessionStorage.SessionMessage = login.userName;
+							$sessionStorage.LocalMessage = login.userName;					
 							//console.log("SUCCESS");			
-							alert("Login successfull!!!");														
+							alert("Login successfull!!!");
+							//dataService.addData(response.data);
+							$sessionStorage.userDetails = response.data;
 							$location.path("Dashboard");								
 						}
 

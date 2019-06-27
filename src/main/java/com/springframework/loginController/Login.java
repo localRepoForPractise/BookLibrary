@@ -13,6 +13,15 @@ public class Login {
 	private String userType;
 	private String createdBy;
 	private Date createdDate;
+	private Date lastUpdatedDateTime;
+	
+	public Date getLastUpdatedDateTime() {
+		return lastUpdatedDateTime;
+	}
+
+	public void setLastUpdatedDateTime(Date lastUpdatedDateTime) {
+		this.lastUpdatedDateTime = lastUpdatedDateTime;
+	}
 
 	public String getUserType() {
 		return userType;
