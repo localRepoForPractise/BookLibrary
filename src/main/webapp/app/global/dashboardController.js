@@ -10,7 +10,7 @@
 		 if($scope.userDetails!=null)
 			 dataService.addData(null);*/
 		 
-		 $scope.userDetails = $sessionStorage.userDetails;
+		 $rootScope.userDetails = $sessionStorage.userDetails;
 		 
 		 function DisplayLoginUserDetails() {												
 			 var loggedUserDetails = $sessionStorage.LocalMessage;

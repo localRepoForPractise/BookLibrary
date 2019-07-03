@@ -27,18 +27,21 @@
 						class="list-group-item list-group-item-success">
 							{{menu.menu_Name}} </a></li>
 				</ul></li>
-		</ul>			
+		</ul>
 	</div>
 </nav>
-<div class="row" ng-init="myVar = true">
-		<div id="divUserName" class="col-lg-3 col-md-offset-9" style="font-size: 15px;">
-			<i class="fa fa-user" aria-hidden="true" style="font-size:20px;"></i> Welcome  {{ userDetails.userName }}
-		</div>
+<div class="row" ng-show="userDetails">
+	<div class="col-lg-3 col-md-offset-9"
+		style="font-size: 15px;">
+		<span > <i class="fa fa-user" aria-hidden="true" style="font-size: 20px;"></i> 
+		Welcome {{ userDetails.userName }}</span>
 	</div>
-	
-	<div class="row">
-	<div  class="col-lg-3 col-md-offset-9" style="font-size: 15px;">
-			<i class="fa fa-clock-o" aria-hidden="true" style="font-size:20px;"></i> Last Login : {{ userDetails.lastUpdatedDateTime }}
-		</div>
+</div>
+
+<div class="row" ng-show="userDetails">
+	<div class="col-lg-3 col-md-offset-9" style="font-size: 15px;">
+		<span><i class="fa fa-clock-o" aria-hidden="true" style="font-size: 20px;"></i> 
+		Last Login : {{userDetails.lastUpdatedDateTime }}</span>
 	</div>
+</div>
 

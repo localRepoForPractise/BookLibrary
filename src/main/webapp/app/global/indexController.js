@@ -53,7 +53,7 @@
 		$scope.getData();	
 		
 		 function DisplayLoginUserDetails() {												
-			 $scope.userDetails = $sessionStorage.userDetails;
+			 $rootScope.userDetails = $sessionStorage.userDetails;
 			 if($scope.userDetails === "")	
 			 {															
 				 alert("Oops!!!Something went wrong please try to login again...");					
