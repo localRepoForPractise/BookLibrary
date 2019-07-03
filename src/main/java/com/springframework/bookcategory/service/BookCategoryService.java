@@ -8,5 +8,9 @@ public interface BookCategoryService {
 	Response getAllScienceBooks(String category);
 
 	Response addBook(BookDTO addBook);
+	
+	Response getAllArtsBooks(String category);
+	
+	Response getUserBookArtsHistory(int loggedUserId ,int enrollBookId); 
 
 }

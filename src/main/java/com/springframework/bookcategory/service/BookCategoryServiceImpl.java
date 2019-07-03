@@ -26,6 +26,16 @@ public class BookCategoryServiceImpl implements BookCategoryService{
 		return bookCategoryDao.addBook(addBook);
 	}
 
+	@Override
+	public Response getAllArtsBooks(String category) {
+		
+		return bookCategoryDao.getAllArtsBooks(category);
+	}
 	
+	@Override
+	public Response getUserBookArtsHistory(int loggedUserId ,int enrollBookId) {
+		System.out.println("******Arts Service******");
+		return bookCategoryDao.getUserBookArtsHistory(loggedUserId , enrollBookId);
+	}
 	
 }

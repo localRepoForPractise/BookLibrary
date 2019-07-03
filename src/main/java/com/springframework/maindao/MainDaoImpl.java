@@ -62,8 +62,7 @@ public class MainDaoImpl implements MainDao {
 		
 		if(userDetails != null)
 		{
-			int count = jdbcTemplate.update(SAVE_LAST_UPDATED_TIME , userDetails.getUserId());						
-			/*response.setCode("200");*/
+			int count = jdbcTemplate.update(SAVE_LAST_UPDATED_TIME , userDetails.getUserId());									
 			response.setResponse("200", "SUCCESS", "SUCCESS", userDetails);
 		}
 		else 

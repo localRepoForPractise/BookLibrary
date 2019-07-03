@@ -1,20 +1,25 @@
 <div ng-app="bookLibraryApp" ng-controller="dashboardController">
-	<h3>Welcome to Book Library System</h3>
-	<div class="row">
-		<div class="col-lg-3 col-md-offset-9" style="font-size: 15px;">
-			<i class="fa fa-user" aria-hidden="true" style="font-size:20px;"></i> Welcome  {{ userDetails.userName }}
+	<div style="visibility:hidden;">
+		<div class="row">
+			<div class="col-lg-3 col-md-offset-9" style="font-size: 15px;">
+				<i class="fa fa-user" aria-hidden="true" style="font-size: 20px;"></i>
+				Welcome {{ userDetails.userName }}
+			</div>
 		</div>
-	</div>
-	
-	<div class="row">
-	<div  class="col-lg-3 col-md-offset-9" style="font-size: 15px;">
-			<i class="fa fa-clock-o" aria-hidden="true" style="font-size:20px;"></i> Last Login : {{ userDetails.lastUpdatedDateTime }}
+
+		<div class="row">
+			<div class="col-lg-3 col-md-offset-9" style="font-size: 15px;">
+				<i class="fa fa-clock-o" aria-hidden="true" style="font-size: 20px;"></i>
+				Last Login : {{ userDetails.lastUpdatedDateTime }}
+			</div>
 		</div>
-	</div>
-	
-	<div class="row">
-	<div class="col-lg-3 col-md-offset-9" style="font-size: 18px;">
-			<span class="fa fa-power-off" aria-hidden="true" style="font-size:20px;"><a href="" ng-click="logout()">Logout</a></span>  			
+
+		<div class="row">
+			<div class="col-lg-3 col-md-offset-9" style="font-size: 18px;">
+				<span class="fa fa-power-off" aria-hidden="true"
+					style="font-size: 20px;"><a href="" ng-click="logout()">Logout</a></span>
+			</div>
 		</div>
 	</div>
 </div>
+

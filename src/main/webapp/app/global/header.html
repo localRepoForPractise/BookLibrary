@@ -1,1 +1,44 @@
-<h1 class="text-center"> Book Library </h1>
+<h1 class="text-center">Book Library</h1>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header ">
+			<a class="navbar-brand" href="#">Book Library</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li class="dropdown" ng-repeat="menu in menuBookList"><a
+				ng-show="menu.menuId===1 ||  menu.menuId===3 || menu.menuId===4"
+				href="#{{menu.menuPath}}"
+				ng-hide="menu.menuId===2 ||  menu.menuId===5 || menu.menuId===6 || menu.menuId===7 || menu.menuId===8">
+					{{menu.menu_Name}}</a> <a ng-show="menu.menuId==2 "
+				class="dropdown-toggle" data-toggle="dropdown">{{menu.menu_Name}}
+					<span class="caret"></span>
+			</a>
+				<ul class="dropdown-menu">
+					<li class="dropdown" ng-repeat="menu in menuBookList"><a
+						ng-show="menu.menuParentId==2" href="#{{menu.menuPath}}"
+						class="list-group-item list-group-item-success">
+							{{menu.menu_Name}} </a></li>
+				</ul></li>
+		</ul>			
+	</div>
+</nav>
+<div class="row" ng-init="myVar = true">
+		<div id="divUserName" class="col-lg-3 col-md-offset-9" style="font-size: 15px;">
+			<i class="fa fa-user" aria-hidden="true" style="font-size:20px;"></i> Welcome  {{ userDetails.userName }}
+		</div>
+	</div>
+	
+	<div class="row">
+	<div  class="col-lg-3 col-md-offset-9" style="font-size: 15px;">
+			<i class="fa fa-clock-o" aria-hidden="true" style="font-size:20px;"></i> Last Login : {{ userDetails.lastUpdatedDateTime }}
+		</div>
+	</div>
+

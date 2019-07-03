@@ -2,6 +2,7 @@ package com.springframework.bookcategory.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -39,4 +40,20 @@ public class BookCategoryController {
 		return response;
 	}
 	
+	
+	@RequestMapping(value="/arts",method=RequestMethod.POST)
+	@ResponseBody
+	public Response getAllArtsBooks(@RequestBody String category){
+		Response response = new Response();
+		response = bookCategoryService.getAllArtsBooks(category);
+		return response;
+	}
+	
+	@RequestMapping(value="/arts/{UserID}/{BookID}",method=RequestMethod.POST)
+	@ResponseBody
+	public Response getUserBookArtsHistory(@PathVariable("UserID") int loggedUserId , @PathVariable("BookID") int enrollBookId){
+		Response response = new Response();
+		response = bookCategoryService.getUserBookArtsHistory(loggedUserId , enrollBookId);
+		return response;
+	}
 }

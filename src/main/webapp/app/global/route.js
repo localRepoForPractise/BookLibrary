@@ -73,6 +73,12 @@
 			templateUrl : './app/global/Dashboard.html',
 			controller  : 'dashboardController',
 		})
+		
+		.state('/arts', {
+			url: '/arts',
+			templateUrl : './app/BookCategory/arts.html',
+			controller : 'artsController'
+		})
 		$urlRouterProvider.otherwise('/');
 	});
 }());
