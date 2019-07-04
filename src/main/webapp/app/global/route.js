@@ -73,6 +73,7 @@
 			templateUrl : './app/BookCategory/arts.html',
 			controller : 'artsController'
 		})
+		window.onpopstate = function (e) { window.history.forward(1); }
 		$urlRouterProvider.otherwise('/');
 	});
 }());

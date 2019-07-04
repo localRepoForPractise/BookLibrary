@@ -8,8 +8,18 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	
 	
+	
  <style>
  
+ .title {
+  position: relative;
+}
+
+.title span:last-child {
+  position: absolute;
+  right: 6px;   /* must be equal to parent's right padding */
+}
+
  .my-navbar {
  
   background-color: #004080;
@@ -159,6 +169,11 @@
 }
 </style>
 	
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js">
+        </script>
+        
+	
 
 <nav class="navbar my-navbar">
 	<div class="container-fluid">
@@ -174,6 +189,7 @@
 					<a ng-show="menu.menuId==2" class="dropdown-toggle" data-toggle="dropdown">{{menu.menu_Name}}
 					<span class="caret"></span>
 			</a>
+			
 				<ul class="dropdown-menu">
 					<li class="dropdown" ng-repeat="menu in menuBookList"><a
 						ng-show="menu.menuParentId==2" href="#{{menu.menuPath}}">
@@ -182,6 +198,14 @@
 		</ul>
 	</div>
 </nav>
+<div class="title">
+<span id="datetime"></span>
+</div>
+<script>
+var dt = new Date();
+document.getElementById("datetime").innerHTML = dt.toLocaleString();
+</script>
+
 <div ng-show="userDetails">
 	<div class="row">
 		<div class="col-lg-3 col-md-offset-9" style="font-size: 15px;">
