@@ -13,12 +13,10 @@
 
 		/** TO GET BASE URI OF APP */
 		$rootScope.baseUrl = $location.$$protocol + "://" + $location.$$host
-				+ ":" + $location.$$port + "/BookLibrary/";
-		
-		
-	
+		+ ":" + $location.$$port + "/BookLibrary/";
 
-		
-	
+
+
+
 	});
 }());
