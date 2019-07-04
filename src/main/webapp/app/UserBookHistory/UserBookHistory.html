@@ -1,22 +1,20 @@
-{{Hello}}
-<div class="jumbotron">
-<center><h2>Book History</h2></center>
-<table class="table table-hover table-bordered table-striped">
-<thead>
-<tr>
-<th>Book Name</th>
-<th>Author</th>
-</tr>
-</thead>
-<tbody>
-<tr ng-repeat="x in book">
-<td>{{x.book_Name}}</td>
-<td>{{x.author_Name}}</td>
-</tr>
-</tbody>
-</table>
-
-
-
+<div>
+	<center>
+		<h3>Book History</h3>
+	</center>
+	<table class="table table-hover table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>Book Name</th>
+				<th>Author</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="x in book">
+				<td>{{x.book_Name}}</td>
+				<td>{{x.author_Name}}</td>
+			</tr>
+		</tbody>
+	</table>
 </div>
 

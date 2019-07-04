@@ -45,13 +45,14 @@
 					}
 					else if(response.code ==="500")
 						//console.log("failure",response);
-					alert("Oops...Something went wrong please try again!!!");
+						alert("Oops...Something went wrong please try again!!!");
 
 				});
 			}
 			else
 			{
 				alert("Please Login to enroll the books!!!");
+				$location.path("login");
 			}
 		}		
 	});

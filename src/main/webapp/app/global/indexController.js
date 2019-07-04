@@ -65,5 +65,12 @@
 		 }
 		 
 		 DisplayLoginUserDetails();
+		 
+		 $scope.logout = function () {
+			 sessionStorage.clear();
+			 $rootScope.userDetails =null;
+			  $location.path('/home');
+         };
+         
 	});
 }());

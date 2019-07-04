@@ -13,12 +13,12 @@
 			<a class="navbar-brand" href="#">Book Library</a>
 		</div>
 		<ul class="nav navbar-nav">
-			<li class="dropdown" ng-repeat="menu in menuBookList"><a
-				ng-show="menu.menuId===1 ||  menu.menuId===3 || menu.menuId===4"
+			<li class="dropdown" ng-repeat="menu in menuBookList"><a 
+				ng-show="menu.menuId===1 ||  menu.menuId===3 ||  menu.menuId===4"
 				href="#{{menu.menuPath}}"
 				ng-hide="menu.menuId===2 ||  menu.menuId===5 || menu.menuId===6 || menu.menuId===7 || menu.menuId===8">
-					{{menu.menu_Name}}</a> <a ng-show="menu.menuId==2 "
-				class="dropdown-toggle" data-toggle="dropdown">{{menu.menu_Name}}
+					{{menu.menu_Name}}</a> 
+					<a ng-show="menu.menuId==2" class="dropdown-toggle" data-toggle="dropdown">{{menu.menu_Name}}
 					<span class="caret"></span>
 			</a>
 				<ul class="dropdown-menu">
@@ -30,18 +30,28 @@
 		</ul>
 	</div>
 </nav>
-<div class="row" ng-show="userDetails">
-	<div class="col-lg-3 col-md-offset-9"
-		style="font-size: 15px;">
-		<span > <i class="fa fa-user" aria-hidden="true" style="font-size: 20px;"></i> 
-		Welcome {{ userDetails.userName }}</span>
+<div ng-show="userDetails">
+	<div class="row">
+		<div class="col-lg-3 col-md-offset-9" style="font-size: 15px;">
+			<span> <i class="fa fa-user" aria-hidden="true"
+				style="font-size: 20px;"></i> Welcome {{ userDetails.userName }}
+			</span>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-3 col-md-offset-9" style="font-size: 15px;">
+			<span><i class="fa fa-clock-o" aria-hidden="true"
+				style="font-size: 20px;"></i> Last Login :
+				{{userDetails.lastUpdatedDateTime }}</span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-3 col-md-offset-9" style="font-size: 18px;">
+			<span class="fa fa-power-off" aria-hidden="true"
+				style="font-size: 20px;"><a href="" ng-click="logout()"> Logout</a></span>
+		</div>
 	</div>
 </div>
 
-<div class="row" ng-show="userDetails">
-	<div class="col-lg-3 col-md-offset-9" style="font-size: 15px;">
-		<span><i class="fa fa-clock-o" aria-hidden="true" style="font-size: 20px;"></i> 
-		Last Login : {{userDetails.lastUpdatedDateTime }}</span>
-	</div>
-</div>
 
