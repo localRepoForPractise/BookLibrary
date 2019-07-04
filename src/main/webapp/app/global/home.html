@@ -4,11 +4,35 @@
 <!-- <input  type="text" ng-model="testVariable"/>
 <button ng-click="submit(testVariable)">submit</button> -->
 
+<style>
+h4 { 
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+</style>
+
+<div class="container"  ng-init="librari = './assets/images/librari.jpg'">
+
+  <h4>About:</h4>
+ 
+  <img ng-src="{{librari}}" style="width: 60%;" align="right">
+  <p style="color:black;">A <span style="color:red">TCS Book Library</span> contains collection of books include Fantasy, Science, History, art and other formats. It is developed in 2001 for TCS associates </p>
+  <h5>Contact Details:</h5><span style="color:blue"> Mail Id:</span>abc@tcs.com<br>
+                           <span style="color:blue"> Phone No:</span>9999999999<br>
+                           <span style="color:blue"> Address:</span>Pune
+</div>
 
 
 
+	
 
-<div ng-init="bookLibrary = './assets/images/BookLibrary.jpg'">
+
+<!-- <div ng-init="bookLibrary = './assets/images/BookLibrary.jpg'">
 	<img ng-src="{{bookLibrary}}" style="width: 100%;">
 
-</div>
+</div> -->

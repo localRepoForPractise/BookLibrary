@@ -12,5 +12,8 @@ public interface BookCategoryService {
 	Response getAllArtsBooks(String category);
 	
 	Response getUserBookArtsHistory(int loggedUserId ,int enrollBookId); 
+	
+	Response getAllHistoryBooks(String category);
+	Response addBookHistory(int userId, int id);
 
 }

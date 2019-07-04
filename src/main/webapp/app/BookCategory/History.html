@@ -1,6 +1,6 @@
 <div>
 	<h1>History Books</h1>
-	<table>
+	<table class="table table-hover table-bordered table-striped">
 		<thead>
 			<tr>
 				<th>Book ID</th>
@@ -11,19 +11,16 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="item in HistoryBookList">
-				<td>{{ item.bookId }}</td>
+			<tr ng-repeat="item in HistoryBookList" >
+				<td>{{ item.id }}</td>
 				<td>{{ item.bookName }}</td>
 				<td>{{ item.bookAuthor }}</td>
-				<td><button onclick="Enroll()">Enroll</button></td>
+				<td><button type="submit" class="btn btn-primary" ng-click="enroll(item)">Enroll</button></td>
+			
 	        </tr>
 		</tbody>
 	</table>
- <script>
-function Enroll(){
-  alert("Book Enroll Successfully");
-}
-</script>
+ 
 
 
 </div>

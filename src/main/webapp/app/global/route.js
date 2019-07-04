@@ -29,12 +29,6 @@
 			controller  : 'UserBookHistoryController',
 		})
 		
-		.state('/History', {
-			url: '/History',
-			templateUrl : './app/global/History.html',
-			//controller  : 'mainController',
-		})
-		
 		.state('/Science', {
 			url: '/Science',
 			templateUrl : './app/global/Science.html',
@@ -54,7 +48,7 @@
 		.state('/HistoryTest', {
 			url: '/HistoryTest',
 			templateUrl : './app/BookCategory/History.html',
-			controller : 'HistoryTestController'
+			controller : 'HistoryController'
 		})
 		.state('/SignUp', {
 			url: '/SignUp',

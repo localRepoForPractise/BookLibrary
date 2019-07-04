@@ -18,7 +18,7 @@ public class MenusDaoImpl implements MenusDao{
 	public static final String GET_ALL_MENUS ="SELECT * FROM BL_MENUS";
 	public Response getMenus()
     {
-		System.out.println("******DAO*******");
+
     	Response response = new Response();
 		List<MenusDTO> menusList = jdbcTemplate.query(GET_ALL_MENUS, new MenusBookRowMapper());
 		

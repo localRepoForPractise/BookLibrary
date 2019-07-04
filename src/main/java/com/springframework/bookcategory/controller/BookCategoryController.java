@@ -56,4 +56,21 @@ public class BookCategoryController {
 		response = bookCategoryService.getUserBookArtsHistory(loggedUserId , enrollBookId);
 		return response;
 	}
+	
+	@RequestMapping(value="/History",method=RequestMethod.POST)
+	@ResponseBody
+	public Response getAllHistoryBooks(@RequestBody String category){
+		Response response = new Response();
+		response = bookCategoryService.getAllHistoryBooks(category);
+		return response;
+	}
+	
+	@RequestMapping(value="/enroll()/{userId}/{id}",method=RequestMethod.POST)
+	@ResponseBody
+	public Response addBookHistory(@PathVariable ("userId") int userId, @PathVariable ("id") int id){
+		Response response = new Response();
+		response = bookCategoryService.addBookHistory(userId, id);
+		return response;
+	}
+	
 }

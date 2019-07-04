@@ -21,7 +21,8 @@ public class BookCategoryDaoImpl implements BookCategoryDao{
 	public static final String ADD_BOOK ="INSERT INTO BL_BOOKS (CATEGORY_ID,BOOK_NAME,BOOK_AUTHOR,CREATED_BY,CREATED_DATE) VALUES(?,?,?,?,CURDATE())";
 
 	public static final String GET_ALL_ARTS_BOOKS ="SELECT * FROM BL_BOOKS WHERE CATEGORY_ID = 1004 ";
-
+	public static final String ADD_BOOK_USERS_HISTORY ="INSERT INTO BL_BOOK_USERS_HISTORY (USER_ID, BOOK_ID, CREATED_DATE) VALUES(?,?,CURDATE())";
+	public static final String GET_ALL_HISTORY_BOOKS ="SELECT * FROM BL_BOOKS WHERE CATEGORY_ID=1003 ";
 	public static final String ENROLl_ART_BOOKS_TO_USER="INSERT INTO BL_BOOK_USERS_HISTORY (USER_ID, BOOK_ID, CREATED_DATE) VALUES(?,?,CURDATE())";
 
 
@@ -76,5 +77,32 @@ public class BookCategoryDaoImpl implements BookCategoryDao{
 			response.setCode("500");
 		return response;
 	}
+	
+	@Override
+	public Response getAllHistoryBooks(String category){
+		Response response = new Response();
+		List<BookDTO> bookList = jdbcTemplate.query(GET_ALL_HISTORY_BOOKS, new ScienceBookRowMapper());
+		
+		if(!bookList.isEmpty())
+			response.setResponse("200", "SUCCESS", "SUCCESS", bookList);
+		else
+			response.setResponse("500", "FAILURE", "NO DATA FOUND", Collections.emptyList());
+			
+		return response;
+	}
+	
+	@Override
+	public Response addBookHistory(int userId ,int id) {
+		System.out.println("******DAO*******");
+		Response response = new Response();
+		int count = jdbcTemplate.update(ADD_BOOK_USERS_HISTORY, userId, id);
+		if(count >0)
+			response.setCode("200");
+		else
+			response.setCode("500");
+		return response;
+	}
+	
+	
 
 }

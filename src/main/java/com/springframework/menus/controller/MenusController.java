@@ -16,7 +16,7 @@ public class MenusController {
 	@Autowired
 	@Qualifier("menuService")
 	private MenuService menuService;
-	@RequestMapping(value="/home", method=RequestMethod.POST)
+	@RequestMapping(value="/header", method=RequestMethod.POST)
 	@ResponseBody
 	public Response getMenus()
 	{
