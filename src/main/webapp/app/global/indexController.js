@@ -38,7 +38,7 @@
 		}
 
 		$scope.getData= function (){
-			HttpService.POST($rootScope.baseUrl+"home","home").then(function(response){
+			HttpService.POST($rootScope.baseUrl+"header","header").then(function(response){
 				if(response.code ==="200"){
 					console.log("success",response.data);
 					$scope.menuBookList=[];
@@ -69,7 +69,7 @@
 		 $scope.logout = function () {
 			 sessionStorage.clear();
 			 $rootScope.userDetails =null;
-			  $location.path('/home');
+			  $location.path('/header');
          };
          
 	});
